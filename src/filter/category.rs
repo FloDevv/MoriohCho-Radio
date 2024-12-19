@@ -1,10 +1,10 @@
-use crate::config::FilterConfig;
+use crate::config::types::FilterConfig;
 
 //filter who remove only from ai filter when categories are in title or description
 pub async fn categoryfilter(
     title: &str,
     description: &str,
-    filter_config: &FilterConfig,
+    filter_config: &FilterConfig
 ) -> Result<bool, Box<dyn std::error::Error>> {
     let title_lower: String = title.to_lowercase();
     let description_lower: String = description.to_lowercase();

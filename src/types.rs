@@ -1,4 +1,4 @@
-//News feed types
+// News feed types
 
 use serde::Deserialize;
 
@@ -35,12 +35,10 @@ pub struct CurrentWeather {
     pub time: String,
     pub temperature: f64,
     pub weathercode: u8,
-
 }
 
 #[derive(Deserialize, Debug)]
 pub struct Hourly {
-
     pub temperature_2m: Vec<f64>,
 }
 
